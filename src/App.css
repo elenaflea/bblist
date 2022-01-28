@@ -1,38 +1,157 @@
+
+
+body{
+  background: #fafafa;
+  margin: 0;
+  background-image: url("back.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: contain;
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 400px;
+  margin: 0 auto;
+  background: #fff;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.App-logo {
+  height: 160px;
+  pointer-events: none;
+  margin-top: 30px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 10s linear;
+    animation-direction: alternate-reverse;
+  }
+  .myIcon {
+    animation: myIcon-spin infinite 30s linear;
+  }
 }
 
 @keyframes App-logo-spin {
+  from {
+    transform: rotate(20deg);
+  }
+  to {
+    transform: rotate(-20deg);
+  }
+}
+@keyframes myIcon-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+h1 {
+  font-size: calc(20px + 2vmin);
+  font-weight: 600;
+  font-family: 'Athiti', sans-serif;
+  margin: 0;
+  color: #24A19C;
+}
+h2 {
+  font-size: calc(15px + 2vmin);
+  font-weight: 300;
+  font-family: 'Allura', cursive;
+  margin: 0;
+}
+h3 {
+  font-size: calc(8px + 2vmin);
+  font-weight: 600;
+  font-family: 'Athiti', sans-serif;
+  margin: 0;
+  color: #24A19C;
+  padding: 10px;
+}
+.giftyName {
+  font-size: calc(6px + 2vmin);
+  font-weight: 400;
+  font-family: 'Athiti', sans-serif;
+  margin: 0;
+  color: #000000;
+  padding: 10px;
+  
+}
+.string {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+hr{
+  height: 1px;
+  width: 30px;
+  background: #24A19C;
+}
+.item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: #fff;
+}
+.photo {
+  width : 90%;
+}
+.btnDeleteAll {
+  background: #24A19C;
+  color: #fff;
+  font-size: calc(5px + 2vmin);
+  font-weight: 500;
+  font-family: 'Athiti', sans-serif;
+  padding: 3px 25px;
+  border: none;
+  border-radius: 30px;
+  margin: 30px 0px;
+}
+.btnRemove, .btnSlide{
+  border: none;
+  background: transparent;
+  color: #24A19C;
+}
+.btnRemove:hover, .btnSlide:hover {
+  color: #086E7D;
+}
+.btnLike{
+  border: none;
+  background: transparent;
+  color: #FEC900;
+  margin: 0 10px 0 0;
+}
+.btnLike:hover{
+  color: #FF1700;
+}
+.btnSlide {
+  margin-top: 10px;
+}
+
+.numberLike{
+  font-size: calc(4px + 2vmin);
+  font-weight: 300;
+  font-family: 'Athiti', sans-serif;
+  margin: 0;
+  color: #000000;
+}
+.myIcon {
+  width: 30px;
+  height: 30px;
+  margin: 30px;
+}
+@media all and (max-width: 500px) {
+  .App {
+    width : 100%;
   }
 }
