@@ -24,6 +24,8 @@ function App() {
     setDatas(newArr);
 
       const slide = document.querySelectorAll("#slide");
+      newArr[index] = gifts[index];
+    
       setT ((t => {
         t ++ ;
         if (t > 2 ) {
@@ -39,6 +41,7 @@ function App() {
     const prevPhoto = (e, index) => {
       
         const slide = document.querySelectorAll("#slide");
+        newArr[index] = gifts[index];
         setDatas(newArr);
         setT ((t => {
         t -- ;
