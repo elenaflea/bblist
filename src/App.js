@@ -5,10 +5,8 @@ import bear from './bear.png'
 import { useState } from 'react';
 import { data } from './data';
 
-
-
 function App() {
-
+  
   const [gifts, setGifts] = useState(data);
 
   const removeItem = (id) => {
@@ -25,15 +23,7 @@ function App() {
   const nextPhoto = (e, index) => {
     setDatas(newArr);
 
-     // if ( e.currentTarget.id - 1 === index ) {
-        const slide = document.querySelectorAll("#slide");
-       // console.log(slide[index]);
-
-      //let newArr = [...datas];
-     // newArr[index] = gifts[index];
-    
-      // setDatas(newArr);
-     // console.log(newArr[index]);
+      const slide = document.querySelectorAll("#slide");
       setT ((t => {
         t ++ ;
         if (t > 2 ) {
@@ -44,16 +34,11 @@ function App() {
       }));
       slide[index].setAttribute('src', newArr[index].image[t] );
       return slide;
-      //}
-      
     };
 
     const prevPhoto = (e, index) => {
-     // if ( e.currentTarget.id - 1 === index ) {
+      
         const slide = document.querySelectorAll("#slide");
-       // let newArr = [...datas];
-       // newArr[index] = gifts[index];
-    
         setDatas(newArr);
         setT ((t => {
         t -- ;
@@ -65,7 +50,6 @@ function App() {
 
       slide[index].setAttribute('src', newArr[index].image[t] );
       return slide;
-     // }
     };
 
   const likeUpdate = (e, index) => {
@@ -75,16 +59,9 @@ function App() {
       count[index] ++ ; 
       return count;
       }) ) 
-   // console.log(count);
-    likeHolder[index].innerHTML = (gifts[index].like) + count[index] ;
-    
-    
-    
+    likeHolder[index].innerHTML = (gifts[index].like) + count[index] ; 
     return likeHolder;
-    
   }
-
-
 
   return (
     <div className="App">
@@ -146,10 +123,8 @@ function App() {
             </button>
           </div>
           <br/> <br/>
-          </div>
-          
-        )
-          
+          </div>     
+        )    
     }))}
 
 <button className='btnDeleteAll' onClick={ () => setGifts([]) }> Delete all </button>
@@ -158,11 +133,7 @@ function App() {
           <img className='myIcon' src={ mylogo } alt="logo"/>
         </a>
 
-
     </div>
-
-
-   
   );
 }
 
