@@ -85,7 +85,7 @@ function App() {
                 <h3> { id } </h3>
               <hr />
             </div>
-          <img id="slide" className='photo' src={ gifts[index].image[3] } alt='photo'/>
+          <img id="slide" className='photo' src={ image[3] } alt='photo'/>
           <div> 
             <button className='btnSlide' onClick={ (e)=> prevPhoto(e, index)  } id = { id } > 
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"  viewBox="0 0 16 16">
