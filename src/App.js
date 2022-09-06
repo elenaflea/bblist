@@ -132,7 +132,7 @@ function App() {
 
 <button className='btnDeleteAll' onClick={ () => setGifts([]) }> Delete all </button>
 
-        <a href='https://grondin.glitch.me/' target="_blank" rel="noreferrer">
+        <a href='https://lunacode.fr/' target="_blank" rel="noreferrer">
           <img className='myIcon' src={ mylogo } alt="logo"/>
         </a>
 
